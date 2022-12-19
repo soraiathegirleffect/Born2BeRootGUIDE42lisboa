@@ -15,7 +15,7 @@ Linux (cluster 2) guide for debian
 
 Installing the VM:
 1 - click on arrow start, use the arrows to select "install" (dont install graphic!!)
-2 - Select the following in order - 1 English - 2 other europe portugal - 3 American English 
+2 - Select the following in order - - English - - other europe portugal - - American English 
 3 - Host Name needs to be your school login + 42 at the end   (Username42)
 4 - Domain name: leave empty, Password for the Host Name use something similar to what i recommended above
 5 - User: write user name of the school without 42, Full name I left blank
