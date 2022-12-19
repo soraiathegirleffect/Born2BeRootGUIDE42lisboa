@@ -6,12 +6,20 @@ In this project you will have to create a password with specific rules I recomme
 Linux (cluster 2) guide for debian
 
 1 -  https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/   -  debian-11.6.0-amd64-netinst.iso
+
 2 - open oracle virtualbox - click NEW - 
+
 3 - name: Born2beroot; Folder: sgoinfre or goinfre; type: debian version 64bits
+
 4 - Memory Size as 1024 MB ;  Create a Virtual Hard Disk Now; VDI (VirtualBox Disk Image)
+
 5 - STORAGE: i put fixed size (but i believe you can put dynamic a lot of colleagues did and was fine
+
 6 - Set Size as 8 GB and then click Continue
+
 7 - Click settings in debian, then storage, Optical Drive  disc symbol you click Choose a disk file... and go find the file you downloaded in step 1 and select it. click OK.
+
+
 
 Installing the VM:
 1 - click on arrow start, use the arrows to select "install" (dont install graphic!!)
