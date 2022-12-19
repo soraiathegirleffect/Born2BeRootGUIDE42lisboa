@@ -122,21 +122,63 @@ Find this line #PermitRootLogin prohibit-password   change to PermitRootLogin no
 2 - type sudo ufw enable           Type sudo ufw status  numbered 
 3 - Type sudo ufw allow ssh     Type sudo ufw allow 4242    Type sudo ufw status 
   
+
 *Connecting to SSH
 1 - check the IP address by typing     hostname -I    -  will show you up-address
 2 - ssh <username>@<ip-address> -p 4242
 3 - exit VM, on debian select Settings   Click Network then Adapter 1 then Advanced and then click on Port Forwarding then SELECT BRIDGE
 4 - Enter VM , type sudo systemctl restart ssh
 5 - Type sudo service sshd status
-6 - open a normal iTerm and type <username>@<ip-address> -p 4242
+6 - open a normal Terminal and type <username>@<ip-address> -p 4242
 
-
-
+        
 *Crontab Configuation
 
-1 - type apt-get install -y net-tools 
+1 - in VM type apt-get install -y net-tools 
 2 - type cd /usr/local/bin/
 3 - type touch monitoring.sh
-4 - type chmod 777 monitoring.sh
+4 - type chmod 777 monitoring.sh        
+        -----
+5 - in your normal terminal type cd /usr/local/bin
+6 - type nano monitoring.sh and paste the text bellow into the vim monitoring.sh
 
 
+#!/bin/bash
+arc=$(uname -a)
+pcpu=$(grep "physical id" /proc/cpuinfo | sort | uniq | wc -l) 
+vcpu=$(grep "^processor" /proc/cpuinfo | wc -l)
+fram=$(free -m | awk '$1 == "Mem:" {print $2}')
+uram=$(free -m | awk '$1 == "Mem:" {print $3}')
+pram=$(free | awk '$1 == "Mem:" {printf("%.2f"), $3/$2*100}')
+fdisk=$(df -BG | grep '^/dev/' | grep -v '/boot$' | awk '{ft += $2} END {print ft}')
+udisk=$(df -BM | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} END {print ut}')
+pdisk=$(df -BM | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} {ft+= $2} END {printf("%d"), ut/ft*100}')
+cpul=$(top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}')
+lb=$(who -b | awk '$1 == "system" {print $3 " " $4}')
+lvmu=$(if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi)
+ctcp=$(ss -neopt state established | wc -l)
+ulog=$(users | wc -w)
+ip=$(hostname -I)
+mac=$(ip link show | grep "ether" | awk '{print $2}')
+cmds=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
+wall "	#Architecture: $arc
+	#CPU physical: $pcpu
+	#vCPU: $vcpu
+	#Memory Usage: $uram/${fram}MB ($pram%)
+	#Disk Usage: $udisk/${fdisk}Gb ($pdisk%)
+	#CPU load: $cpul
+	#Last boot: $lb
+	#LVM use: $lvmu
+	#Connections TCP: $ctcp ESTABLISHED
+	#User log: $ulog
+	#Network: IP $ip ($mac)
+	#Sudo: $cmds cmd"
+
+        
+7 - Save and Exit your monitoring.sh and go back to your Virtual Machine
+8 - type sudo visudo    under %sudo ALL=(ALL:ALL) ALL  type this: username ALL=(root) NOPASSWD: /usr/local/bin/monitoring.sh
+under ROOT ALL=(ALL:ALL) ALL  type this: username ALL=(ALL:ALL) ALL
+9 - exit and save your sudoers file,  type sudo reboot 
+10 - Type sudo /usr/local/bin/monitoring.sh 
+11 - Type sudo crontab -u root -e to open the crontab and type at the end of the crontab:
+ */10 * * * * /usr/local/bin/monitoring.sh 
