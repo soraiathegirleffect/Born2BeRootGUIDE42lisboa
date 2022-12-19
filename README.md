@@ -119,7 +119,7 @@ Find this line #PermitRootLogin prohibit-password   change to PermitRootLogin no
 
 *Installing and Configuring UFW 
 1 - type sudo apt install ufw
-2 - type sudo ufw enable           Type sudo ufw status numbered to check the status of UFW
+2 - type sudo ufw enable           Type sudo ufw status  numbered 
 3 - Type sudo ufw allow ssh     Type sudo ufw allow 4242    Type sudo ufw status 
   
 *Connecting to SSH
@@ -138,4 +138,5 @@ Find this line #PermitRootLogin prohibit-password   change to PermitRootLogin no
 2 - type cd /usr/local/bin/
 3 - type touch monitoring.sh
 4 - type chmod 777 monitoring.sh
+
 
