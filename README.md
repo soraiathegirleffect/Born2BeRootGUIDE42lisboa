@@ -43,7 +43,7 @@ Installing the VM:
 
 9 - Select Separate /home, /var, and /tmp paritions , then Select Yes for the LVM question.
 
-10 - Create a Encryption passphrase - same as password
+10 - Create a Encryption passphrase , same as password
 
 11 - amount of volume group to use for guided partitioning. - write "max", then select Finish partitioning and write changes to disk
 
@@ -240,7 +240,6 @@ Find this line #PermitRootLogin prohibit-password   change to PermitRootLogin no
 	
 4 - type chmod 777 monitoring.sh        
 	
-        -----
 	
 5 - in your normal terminal type cd /usr/local/bin
 	
