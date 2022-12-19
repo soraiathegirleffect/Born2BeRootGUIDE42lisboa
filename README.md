@@ -321,3 +321,11 @@ under ROOT ALL=(ALL:ALL) ALL  type this: username ALL=(ALL:ALL) ALL
 	
  */10 * * * * /usr/local/bin/monitoring.sh 
 	
+*make Signature.txt 
+
+1 - go to Terminal and type cd, type cd goinfre/ ... Born2beroot.vdi
+	
+2 - Type shasum born2beroot.vdi then Copy the output number 
+	
+3 - create a signature.txt file and paste that number in the file to submit.
+	
