@@ -166,9 +166,7 @@ PASS_MIN_DAYS    2
         (Enter for the rest)
 	
   
-6 - chage root
-	
-        Same as before
+6 - chage root  with Same steps as before
 
 7 - type sudo reboot
 
