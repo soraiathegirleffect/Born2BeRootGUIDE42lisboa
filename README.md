@@ -322,7 +322,7 @@ under ROOT ALL=(ALL:ALL) ALL  type this: username ALL=(ALL:ALL) ALL
 	
  */10 * * * * /usr/local/bin/monitoring.sh 
 	
-*make Signature.txt 
+*Last step is to make Signature.txt 
 
 1 - go to Terminal and type cd, type cd goinfre/ ... Born2beroot.vdi
 	
