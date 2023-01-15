@@ -153,17 +153,17 @@ PASS_MAX_DAYS    30
 PASS_MIN_DAYS    2
 
 
-5 - type chage <yourlogin>
+5 - type chage yourlogin
 	
-        Minimum Password Age [0]: 2
+Minimum Password Age [0]: 2
 	
-        Maximum Password Age [9999]: 30
+Maximum Password Age [9999]: 30
 	
-        Last Password Change (YYYY-MM-DD) [date]: <last time you change password>
+Last Password Change (YYYY-MM-DD) [date]: <last time you change password>
 	
-        Passwchage <yourlogin>chage ord Expiration Warning [7]: 7
+Passwchage <yourlogin>chage ord Expiration Warning [7]: 7
 	
-        (Enter for the rest)
+(Enter for the rest)
 	
   
 6 - chage root  with Same steps as before
