@@ -214,9 +214,9 @@ Find this line #PermitRootLogin prohibit-password   change to PermitRootLogin no
 
 *Connecting to SSH
 	
-1 - check the IP address by typing     hostname -I    -  will show you up-address
+1 - check the IP address by typing     hostname -I    -  will show you IP-address
 	
-2 - ssh <username>@<ip-address> -p 4242
+2 - ssh username@ip-address -p 4242
 	
 3 - exit VM, on debian select Settings   Click Network then Adapter 1 then Advanced and then click on Port Forwarding then SELECT BRIDGE
 	
@@ -224,7 +224,7 @@ Find this line #PermitRootLogin prohibit-password   change to PermitRootLogin no
 	
 5 - Type sudo service sshd status
 	
-6 - open a normal Terminal and type <username>@<ip-address> -p 4242
+6 - open a normal Terminal and type username@ip-address -p 4242
 	
 
         
