@@ -283,27 +283,27 @@ cmds=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
 	
 wall "	#Architecture: $arc
 	
-	#CPU physical: $pcpu
+#CPU physical: $pcpu
 	
-	#vCPU: $vcpu
+#vCPU: $vcpu
 	
-	#Memory Usage: $uram/${fram}MB ($pram%)
+#Memory Usage: $uram/${fram}MB ($pram%)
 	
-	#Disk Usage: $udisk/${fdisk}Gb ($pdisk%)
+#Disk Usage: $udisk/${fdisk}Gb ($pdisk%)
 	
-	#CPU load: $cpul
+#CPU load: $cpul
 	
-	#Last boot: $lb
+#Last boot: $lb
 	
-	#LVM use: $lvmu
+#LVM use: $lvmu
 	
-	#Connections TCP: $ctcp ESTABLISHED
+#Connections TCP: $ctcp ESTABLISHED
 	
-	#User log: $ulog
+#User log: $ulog
 	
-	#Network: IP $ip ($mac)
+#Network: IP $ip ($mac)
 	
-	#Sudo: $cmds cmd"
+#Sudo: $cmds cmd"
 	
 
         
