@@ -1,9 +1,9 @@
 # Born2BeRootGUIDE42lisboa
 Guide to Born2BeRoot for 42lisboa WITHOUT BONUSSSS!!!
 
-In this project you will have to create a password with specific rules I recommend to use the same password as everything try "42.HelloWorld"
+In this project you will have to create a password with specific rules I recommend to use the same password for everything try "42.HelloWorld"
 
-Linux (cluster 2) guide for debian
+This is Linux (cluster 2) guide for debian!
 
 
 1 -  https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/   -  debian-11.6.0-amd64-netinst.iso
