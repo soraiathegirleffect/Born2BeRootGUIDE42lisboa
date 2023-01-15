@@ -241,7 +241,7 @@ Find this line #PermitRootLogin prohibit-password   change to PermitRootLogin no
 	
 5 - in your normal terminal type cd /usr/local/bin
 	
-6 - type nano monitoring.sh and paste the text bellow into the vim monitoring.sh :=
+6 - type nano monitoring.sh and paste the text bellow into the vim monitoring.sh :
 	
 
 
