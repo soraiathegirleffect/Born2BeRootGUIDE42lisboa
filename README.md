@@ -1,6 +1,7 @@
 # Born2BeRootGUIDE42lisboa
 Guide to Born2BeRoot for 42lisboa WITHOUT BONUSSSS!!!
 
+
 In this project you will have to create a password with specific rules I recommend to use the same password for everything try "42.HelloWorld"
 
 This is Linux (cluster 2) guide for debian!
